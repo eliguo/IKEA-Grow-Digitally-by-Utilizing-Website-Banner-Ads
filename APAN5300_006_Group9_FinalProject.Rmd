@@ -1,0 +1,562 @@
+---
+title: "Final Project"
+author:  "Group 9: Eli Guo, Jiayu Zhang, Qinrui Tian, Ruishan Wu, Xinyi Zhang"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, comment="", warning = FALSE, message = FALSE, tidy.opts=list(width.cutoff=55), tidy = TRUE)
+```
+
+## Part 1:  Research Proposal
+
+### Executive Summary / Abstract
+
+**Authors (Jiayu Zhang 100%)**: 
+
+There is no doubt - E-commerce has provided numerous enterprises with higher returns and more development prospects. Selling online has become popular because of the benefits of faster buying, price comparison, and more customer flexibility. For businesses, e-commerce also means quicker and automated transactions and more diverse advertising and marketing strategies. Some challenges faced by the furniture company - IKEA are banner blindness and the competitive eCommerce market. CDO confirmed the potential business growth of IKEA e-commerce at IKEA Retail that IKEA needs to embed digitalization into all aspects of IKEA, especially new and improved navigation and search functions (Vennenbernd, 2021). To improve IKEA's eCommerce development, the research team would work with the IKEA marketing team and an external marketing analytical vendor - NetConversions (NetC), to understand the outcomes of three stimuli in banner ads design: discount rates, word length, and the presence or absence of pop-up animations on the user digital shopping behavior, using an experimental study and measured by click-through rate (CTR). The researchers design new messages shown on the website banner ads, and NetConversions will track the user behavior and analyze how the different designs will influence the click-through rate (CTR). Finally, the research conducted 1000 times testing in the simulation on 6 scenarios (no effect vs. effect) and the study will generate three possible recommendations for IKEA’s marketing strategies to grow digitally. 
+
+
+### Statement of the Problem
+
+**Authors (Qinrui Tian 80%; Jiayu Zhang 20%)**: 
+
+Our study investigates how to design banner advertisements, one of the most crucial marketing and advertising strategies utilized in e-commerce, to attract as many consumers as possible. The research will be carried out in one of the world’s largest furniture retail companies, IKEA. Today, IKEA primarily operates in physical stores. However, we believe that IKEA needs to pay more attention to e-commerce since IKEA only had 0.6 billion in 2020 in its net e-commerce sales compared to its competitor, Wayfair, which had 14.1 billion in net sales in 2020 (Statista, 2022). Focusing on e-commerce and advertising strategies becomes vital to IKEA's future development, and a good banner ad will help IKEA promote consumer traffic and e-commerce sales. 
+ 
+We think there is still much room for improvement on IKEA’s banners. For example, the discount rate may be too low to attract new consumers, the slogan on its banner seems vague and less appealing, and the appearance of the banners may lack interest. All these problems could become significant challenges for good banner advertising, which is called banner blindness. Banner blindness is the tendency for users to avoid attending to banner ads or anything that preattentively resembles banner ads (Benway & Lane, 1998). Banner blindness is affected in many ways, like the content of the banners or how they emerge on the website. Therefore, in our study, we will spend much effort studying banners and trying to maximize the effectiveness of IKEA’s banner advertisement.
+
+
+### Research Questions, Hypotheses, and Effects
+
+**Authors (Xinyi Zhang 100%)**: 
+
+In our study, we mainly focus on the following research questions:
+
+1. If IKEA changes its current static banner to animated banner advertisements, will it generate more click-through rate (CTR) for the IKEA webpage? 
+ 
+Null hypothesis: Changing animated banners from static banners will not generate more click-through rate (CTR) for IKEA.
+Alternative hypothesis: Changing animated banners from static banners will generate more click-through rate (CTR) for IKEA.
+
+$H_0: \mu_{animated} - \mu_{static} ≤ 0$  
+$H_a: \mu_{animated} - \mu_{static} > 0$
+
+We would hypothesize that there will be a 0.3% increase in Click-through rate (CTR) for IKEA’s webpage compared to IKEA’s current static banner design (no pop-up animation).
+
+2. Compared to the long word length (more than 20 words) shown on IKEA’s website, will the click-through rate (CTR) on the IKEA webpage rise when the word length on a banner gets shortened (within 10 words)?
+ 
+Null hypothesis: As the word length of banner advertisements shortens to less than 10 words, the click-through rate (CTR) for the IKEA webpage will not rise.
+Alternative hypothesis: As the word length of banner advertisements shortens to less than 10 words, the click-through rate (CTR) for the IKEA webpage will rise as well.
+
+$H_0: \mu_{within10} - \mu_{current} ≤ 0$  
+$H_a: \mu_{within10} - \mu_{current} > 0$
+
+We would hypothesize that there will be a 0.5% increase in click-through rate (CTR) for IKEA’s webpage compared to long word length on the banner (more than 20 words) if the words shown on the banner are less than 10 words.
+
+3. Compared to banners with no discount, will adding 20% discount rates showing on banners increase the click-through rate (CTR) for IKEA webpage?
+
+Null hypothesis: By adding a 20% discount rate on banner advertisements, the click-through rate (CTR) for the IKEA webpage will not increase.
+Alternative hypothesis: By adding a 20% discount rate on banner advertisements, the click-through rate (CTR) for the IKEA webpage will increase.
+
+$H_0: \mu_{add.20discount} - \mu_{current.pricing} ≤ 0$  
+$H_a: \mu_{add.20discount} - \mu_{current.pricing} > 0$
+
+We would hypothesize that there will be a 0.7% increase in click-through rate (CTR) for IKEA’s webpage after adding a 20% discount rate compared to no discount.
+
+
+### Importance of the Study and Social Impact
+
+**Authors (Qinrui Tian 90%; Jiayu Zhang 10%)**: 
+
+Through the comprehensive exploration of this study on banner advertisements, how different dimensions of this marketing strategy will influence people’s interest in IKEA’s furniture will be unraveled and scrutinized. There will be an expansion on the current understanding of the efficiency of banners in terms of their discount rates, word length, and how banners emerge. 
+ 
+The research team hopes this study will benefit IKEA in deciding which kind of banners they should design and use in order to attract more customers and promote its e-commerce sales. Other enterprises can also apply the result of this research as a reference for designing their future banners. The study also encourages more innovation in the marketing strategies which can be employed in the future furniture industry, pushing for a more in-depth analysis of banners. On the other hand, our research helps companies reduce the meaningless costs of advertising. As e-commerce becomes a primary channel to generate traffic and brand awareness, companies spend hundreds of thousands of unnecessary budgets on advertising. The study aims to guide the correct direction in designing an effective banner ad to attract customers. 
+
+
+### Literature Review
+
+**Authors (Ruishan Wu 60%; Jiayu Zhang 40%)**: 
+
+**Furniture E-commerce**:  
+Schuler and Buehlmann (2002) points out that e-commerce is a significant threat to conventional industries, especially when competitors sell the same quality of product at lower prices but better service. They believe that household goods retailers should keep up with the digital transformation trend. However, the transformation from traditional street-side businesses to selling online is usually affected by the type of goods. Some studies found that Generation X and Generation Y internet users are less likely to purchase furniture online compared to other types of e-commerce products because home goods are not daily necessities compared to consumer goods (Lissitsa & Kol, 2016). Oh, Yoon and Shyu (2008) mention that one barrier for consumers to shopping furniture e-commerce is that it requires them to spend more time and have more pressure on searching, filtering, and selecting the home goods they will use for a long time. Thus, attracting more consumers and stimulating consumers’ purchase intentions on furniture is essential for furniture retailers. Manchanda and Dubé (2006) used several models and conducted experiments to prove the efficiency of banner advertising. They have finally found that exposure to banner advertising significantly affects Internet purchasing. Specifically, exposure to banner advertising increases the purchase probabilities for current customers. 
+ 
+**IKEA target customers**:  
+According to Peng (2022), IKEA targets middle-class consumers between the ages of 20 and 34, with an average salary of between $35k and $80k. Additionally, both genders frequent IKEA at similar rates. 
+ 
+**Banner Types**:  
+Generally, three types of banners exist in the digital world: flash banners, animated GIF banners, and Static Banners (Outbrain.com, n.d.). Regarding online presentation, banners can be displaced in rotating, scrolling, floating, and other ways. Besides the popularly used types, Brown (2020) has studied a creative type of banner used within pull-down menus. The results show higher performance on internet users’ attention and higher click-through rate (CTR) numbers than traditional and static banners. However, other researchers point out that adding more creativity to banner design does not significantly remove banner blindness, but having outstanding visual and consistent design can help interested users recall the banner message(Qiang, Yuanjian, Yushi, & Jiale, 2021). Interestingly, Dou, Linn, and Yang (2001) came up with a new idea of keywords-activated ads called “Smart banner.” Banner ads will pop up at the right time and place for customers in the process of product information search, which can make the search results more accurate. To maximize the customer’s online shopping experience,  Altmeyer and Dernbecher (2019) developed Gamified ads which will appear directly on the deactivated banner. The result shows that adding additional playful ads can positively influence advertising effectiveness and bring more enjoyment to the users. 
+ 
+**Click-through Rate to access banner advertisement effectiveness**:  
+Click-through rate (CTR), which is a ratio that measures the number of clicks divided by the total impressions, is a dominant indicator to examine the effectiveness of online advertisement banners in past research (Robinson & Wysocka 2007; Jeong & King, 2010; North & Ficorilli, 2017). Researchers believe that the ratio can indicate consumer interest in the advertisement and the likelihood of making purchases.According to the study of LOCALiQ in 2022, the average search ads click-through rate in all industries is 6.64% while for the home and home improvement industry, the average click-through rate (CTR) is 4.62%.
+ 
+**Stimuli in Banner ads**:  
+The elements of an online advertisement banner can be categorized into central and peripheral cues. While key cues pertain to the message content of the banner, peripheral cues refer to the design of the banner, including format, position, color, size, etc.
+ 
+Numerous studies have been conducted to examine the effect of the peripheral cues of the online banner. Previous studies have demonstrated that placing animated banner ads on the web home page influences the internet user’s attitude toward the brand (Lee & Ahn, 2012). Besides, the timing of banner ads being offered varies among consumer responses. Wendy (2006) ’s research found that delay in offering banner ads on the gateway page has negative effects on both the browser’s clickthrough and exit behavior while presenting the pop-up promotion on content pages instead of gateway pages will lead to additionally 1.45 page views (6.31 vs. 4.86 pages). The position of the banner can also be influential. When the banner was put in the top position of the webpage, internet users will have a more retentive memory of the information they saw on the page, compared to the banner ads placed in the right position (John & Sathiyaseelan, 2014). This is also aligned with Dou, Linn & Yang’s findings.
+ 
+However, different industries potentially provide contrasting effects, and the outcome of their interaction can be contradictory. North and Ficorlli (2017) found that static, blue banners enticed more clicks than animated, red banners, with a mean difference of 16.1 and 7.08 for an insurance company. Nonetheless, there is little evidence to support the effect of banner shape or size on advertising effectiveness on apparel retailer websites (Namin, Hamilton, & Rohm, 2020). While Namin and his colleagues also discovered that the animation effect could boost banner click-through rate (CTR)  by 0.002%, Robinson’s online gaming study found scant evidence to prove the impact of animated banners. Hershberger (2003) found that the medium level of color generates a higher click-through rate (CTR) than both low and high levels of color in Business to Business (B2B) and Business to Customer (B2C) companies. However, one result that falls apart from her expectation is that incentives included in the banner ads bring less click-through rate (CTR) for B2C but work better for B2B.
+ 
+Researchers also investigate how central cues like promotion incentive information, including coupons, discounts, and prices interacted with the banner ads. Some researchers found that such offers appear to have an adverse impact on what was intended. For instance, promotional incentives resulted in -a 54.7% lower click-through rate (CTR) for online casino banner ads (Robinson, Wysocka, & Hand, 2007). However, a recent eye-tracking study showed that the banners with higher discount rates were more appealing and eye-catching than those with lower discount rates (Peker, Menekse Dalveren, & İnal, 2021). Huang (2017) also substantiates the thesis by finding that discount information on apparel banner ads can increase female consumers’ eye-contact time and the number of fixations by 16.7 seconds and 1.02 times, respectively. 
+ 
+Notwithstanding the studies stated above, the understanding of how the various content components of online banner advertising affect visual attention is still quite limited. Some researchers have examined how text length, the image-text ratio, and the language of banner ads influence banner effectiveness (Huang 2017, Zorn, Olaru, & Veheim, 2012). Robinson, Wysocka, and Hand (2007) reported that banners with short (1-5 words), median (6-10 words), or long messages (11-15 words) have significantly lower click-through rates than very long messages (more than 15 words) by -40.9%, -35.5%, -47.0% in the online game industry. A study of email marketing campaigns demonstrated that longer texts decrease click-through rate (CTR) by -36.1% (Lorente-Páramo, Chaparro-Peláez, & Hernández-García, 2020). Therefore, the present study aims to fill the gaps and explore how the content features affect the effectiveness of online banner advertisements through click-through rates in the furniture and home furnishings industry.
+
+
+### Research Plan
+
+**Authors (Ruishan Wu 50%; Qinrui Tian 25%; Jiayu Zhang 25%)**: 
+
+#### Population of Interest
+
+**Authors (Ruishan Wu 100%)**: 
+
+The aim of the study is to explore the impact of three characteristics of IKEA banner ads on the click-through rate of IKEA’s target consumers in the United States, which is most concerned by the management level and crucial to the IKEA topline. Therefore, the population of interest will consist of IKEA's current and potential online customers in the U.S.
+
+
+#### Sample Selection
+
+**Authors (Ruishan Wu 100%)**: 
+
+The study will collaborate with IKEA and NetConversions (NetC), a Web analytic company that provides services to test individual changes to a Website. The experiment will be conducted on the IKEA website with actual website visitors as observations. Selecting actual web visitors as samples rather than recruiting participants is to simulate the real web-visiting experiences and then ensure the participants follow their original behavior. Thus, the study could assess the real effect of banners. This is because there is a high possibility that the participants will change their behavior once they know they are under experiments, and their behaviors tend to conform with projected expectations. 
+ 
+With the help of NetC’s algorithm, the study will generate simple random samples of web visitors whose IP address is within the U.S. The sample will only select from web visitors who are using personal computers rather than mobile devices (E.g. Cellphone, iPad etc.). Computer-sized screens preclude the effect of screen format on banner ad performance. Each group will generate a similar size of the sample every day and will have a similar geographic distribution by state. According to research by Telang, Boatwright and Mukhopadhyay (2002), people who search for information during the day and those who search at night are likely to behave very differently. Therefore, the study will ensure samples of each group have a similar distribution of their visiting time. Additionally, the sample will exclude browsers already exposed to any banner condition based on their unique user number specific to the PC used to browse the site. 
+ 
+Before conducting the study, the research team calculated a sample size to demonstrate the expected effect without oversampling. We assume that the actual difference in means.
+
+
+#### Operational Procedures
+
+**Authors (Ruishan Wu 100%)**: 
+
+For the experiment, the banner will be designed as a winter sales promotion campaign. The web visitors will participate in the experiment unwittingly. They will be randomly assigned to one of the groups in the research questions with different designs of the banners. NetC’s script overlay technique allows the study to modify and test the banner characteristics on the IKEA website with the existing design without the need to revise the whole page, which is cost-saving. 
+ 
+The banner will be displayed at the center of the gateway page of the website (Figure 1-3) at a similar size, and web visitors can browse the IKEA website freely as usual. For research question 1, both groups will be exposed to the Figure 1 banner. For the treatment group, the pop-up banner will be triggered immediately once the selected participants open the website. For research question 2, Figure 1 banner will be shown for the control group and Figure 2 for the treatment group. For research question 3, Figure 1 banner will be shown for the control group and Figure 3 for the treatment group. After clicking the “Shop offers” button, the participants will be redirected to a web page with selected winter products. The study will compare the average click-through rate (CTR) for the banner (“Shop offers” button) across each group and analyze the effectiveness of the banner design.
+
+```{r echo=FALSE, out.width="50%"}
+knitr::include_graphics("~/Data/APAN 5300/Final Project/Figure1.png", error = FALSE)
+```
+
+Figure 1: banner with no discount and long message
+
+```{r echo=FALSE, out.width="50%"}
+knitr::include_graphics("~/Data/APAN 5300/Final Project/Figure2.png", error = FALSE)
+```
+
+Figure 2: banner with no discount and short message
+
+```{r echo=FALSE, out.width="50%"}
+knitr::include_graphics("~/Data/APAN 5300/Final Project/Figure3.png", error = FALSE)
+```
+
+Figure 3: banner with 20% discount and long message
+
+
+#### Brief Schedule
+
+**Authors (Ruishan Wu 100%)**: 
+
+The experiment will run over a span of 10 non-holiday weekdays. All data will be collected from 12/12/2022 to 12/21/2022. Data analysis will be completed within one week after data collection. To ensure the operability of this experimental design and the smooth cooperation between both parties, a small sample trial will be conducted and analyzed three weeks before the actual experiment. Based on the trial’s result, the sample selection criteria and operational plan are planned to be finalized with the IKEA digital marketing department and NetC two weeks before the implementation. The campaign data will be generated and stored in IKEA. Before the experiment, the data format and required fields for our subsequent data analysis will be clarified with related IKEA department staff. No external staff is required.
+
+
+#### Data Collection
+
+**Authors (Jiayu Zhang 100%)**: 
+
+IKEA will assign a marketing manager to work with a delegated marketing analyst from  NetConversions to discuss what data IKEA specifically wants to collect for each visit and click. NetConversions will provide the methodology to track visitors’ behavior. Specifically, the data is collected on both which pages are visited and the actual paths visitors follow while being exposed to the banner ads. Participants’ click-through rates (CTR) of the banner ads will be  recorded for the data analysis stage. People who close the website within 3 seconds will be excluded from the sample since it suggests that the visitor is accidentally entering the website. The duration of the experiment will be collected via a cookie on the visitor’s PC.
+
+
+#### Data Security
+
+**Authors (Qinrui Tian 50%; Jiayu Zhang 50%)**: 
+
+The study uses third-party service providers to help improve the study of how IKEA’s banners will influence customers’ purchase intentions. The research team is responsible for communicating in advance with IKEA and NetConversion to kindly remind them to conduct internal data security training for the project representatives. The research team will make sure that the participants’ identities and personal information will not be disclosed. To protect participants' confidentiality, the research team will encrypt computer-based files and store documents, like signed consent forms, in a locked file cabinet. 
+ 
+To analyze the user-level data, IKEA will share participants’ personal information with NetC, which follows the guidance of its privacy policy. In terms of the manner of maintaining the data’s security, IKEA uses encryption techniques and other safeguards such as firewalls and password protection to keep the information secure and protected. Also, it implements physical controls in IKEA’s buildings that restrict access to our participants’ personal information (IKEA, 2022).
+ 
+The personal information may be stored and processed by NetConversion. NetConversion does not knowingly accept, collect, or process personally identifiable information from its clients, and it strictly uses anonymized or aggregated data sets(NetConversion, 2022). NetConversion will promise IKEA that it will not disclose any data to any parties other than IKEA, except for administrative, legal, or security purposes. Moreover, IKEA has the right to erase the data NetC holds in this study.
+
+
+#### Variables
+
+##### Outcomes (Dependent Variables)
+
+**Authors (Qinrui Tian 100%)**: 
+
+The dependent variable is the effectiveness of banner ads, measured by participants’ click-through rate (CTR) of the banner. Each participant’s outcome will be measured by whether he/she clicks the banner button and recorded by IKEA. The outcome will be binary. The result of the experiment - click-through rate (CTR) is defined as the Number of clicks / Number of impressions * 100%. 
+
+
+##### Treatments (Independent Variables)
+
+**Authors (Jiayu Zhang 50%；Ruishan Wu 50%)**: 
+
+The independent variables for the study are discount rates (20%), word length, and the presence or absence of pop-up animations. Word length is categorized as short (10- words) and long (20+ words). The short message will contain the campaign name or discount rate based on the experiment condition, while the long message will include a more detailed description of this event (E.g., promotion period, T&C, etc.). To examine the effect of quantitative information, the study is designed to test banners with a 20% discount rate and without discount rate information. The rationales behind making the hypothesis are: first, the research team benchmarked a comparable furniture eCommerce company - Wayfair that shows the specific discount numbers in its website banner ads and also animated pop-ups while opening the website, where the research team assumed that such a method may have a higher chance to increase the website traffics and boost the click-through rate (CTR). Second, the research team hypothesized that the long word length may reduce users' internet shopping experience as the messages are too wordy which makes users less likely to spend time reading and processing the specific content shown in the banner ads.
+
+
+##### Other Variables
+
+**Authors (Jiayu Zhang 100%)**: 
+
+There are no other variables needed in this study. The research team conducted an experiment and utilized the random assignment approach to select the sample so that this study is not concerned with other variables' confounding effects.
+
+
+### Statistical Analysis Plan  
+
+**Authors (Xinyi Zhang 100%)**: 
+
+Previous literature suggests that pop-up animation, shortening the word lengths, and adding discount rates on banners can be effective in improving banner effectiveness in some cases. In this study, our primary analysis will be three comparisons of the 10-day change in click-through rate (CTR) of IKEA’s webpage: 1) between pop-up animation banner and static banner; 2) between different word lengths on the banner. 3) between different discount types shown on the banner. Since we are interested in the difference in means of click-through rate (CTR) before and after the banner design, word length, and discount rates, and click-through rate (CTR) is a binary variable; The research team will use the two-sample proportion test with a p-value < 0.05 as our critical value. We expect the distribution of click-through rate (CTR) on IKEA’s website to be skewed. The control group of banner design in the study is IKEA’s webpage with static banner design. The treatment group of banner design is IKEA’s webpage, with pop-up animations shown on their banners. The study's control group of word length is IKEA’s webpage design, with more than 20 words shown on their banner. The treatment group of word length is IKEA’s webpage, with less than 10 words shown on their banners. The control group of discount types in our study is IKEA’s webpage design with no discount rate shown on their banners. The treatment group of discount types is IKEA’s webpage, with an extra 20% discount shown on their banners. 
+
+Based on the results, we found that all p-value between the three comparisons were less than 0.05, which means that we reject the null hypothesis and conclude that there is statistical evidence showing that pop-up animation shown on banners can increase click-through rate (CTR) compared to static banners on IKEA’s website. We can also conclude that shortened word lengths (less than 10 words) shown on banners can boost click-through rate (CTR) compared to longer word lengths (more than 20 words) on IKEA’s webpage. Besides, adding a 20% discount rate on banners can generate more click-through rate (CTR) compared to no discount rate shown on banners on IKEA’s website. 
+
+
+### Sample Size and Statistical Power
+
+**Authors (Eli Guo 100%)**: 
+
+For each research question, we calculate the minimum number of respondents needed in each group to achieve the suggested effect size before conducting the study. As explained in the Statistical Analysis Plan section, since the dependent variable is binary, we will adopt a two-sample test of proportions with a significance level of 0.05. We would like to detect an effect size of 0.003 for Research Question 1, an effect size of 0.005 for Research Question 2, and an effect size of 0.007 for Research Question 3. We also assume an intended statistical power of 0.8 and balanced sample sizes.
+
+RQ1:
+
+```{r}
+sample.size1 <- ceiling(power.prop.test(p1 = 0.05, p2 = 0.053, sig.level = 0.05, power = 0.8, alternative = "one.sided")$n)
+sample.size1
+```
+
+RQ2:
+
+```{r}
+sample.size2 <- ceiling(power.prop.test(p1 = 0.05, p2 = 0.055, sig.level = 0.05, power = 0.8, alternative = "one.sided")$n)
+sample.size2
+```
+
+RQ3:
+
+```{r}
+sample.size3 <- ceiling(power.prop.test(p1 = 0.05, p2 = 0.057, sig.level = 0.05, power = 0.8, alternative = "one.sided")$n)
+sample.size3
+```
+
+
+### Possible Recommendations
+
+**Authors (Xinyi Zhang 100%)**: 
+
+After analyzing the results based on different scenarios, there are three possible recommendations. 
+ 
+Firstly,if the observed p-value of testing the difference between banner designs was smaller than 0.05, the research team would reject the null hypothesis and conclude that there is statistical evidence showing that pop-up animation shown on the banner can increase the click-through rate (CTR) on IKEA’s webpage. It also implied a meaningful effect size of 0.3% increase in click-through rate (CTR) for IKEA’s webpage compared to IKEA’s current static banner design(no pop-up animation). It is a realistic number that IKEA can achieve. Therefore, we would recommend that IKEA add pop-up animations like GIFs on their web banners in order to boost their click-through rate (CTR). However, if the observed p-value of testing the difference between banner designs was greater than 0.05, the research team would fail to reject the null hypothesis and conclude that pop-up animation will not generate more click-through rate (CTR) compared to static banner. Thus, we would recommend IKEA to continue use its static banner.
+ 
+Second, if the observed p-value of testing the difference between word length is smaller than 0.05. In that case, we will reject the null hypothesis and conclude that there is statistical evidence showing that shortened word length(less than 10 words) shown on the banner can increase the click-through rate (CTR) on IKEA’s webpage. It also implied a meaningful effect size of 0.5% increase in click-through rate (CTR)  for IKEA’s webpage if the words shown on the banner are less than 10 words compared to the long word length on the banner(more than 20 words). Therefore, we would recommend that IKEA have shortened word lengths such as “WINTER SALE” on their web banners in order to boost their click-through rate (CTR). While if the p-value of testing the difference between word length is greater than 0.05, then we would fail to reject null hypothesis and conclude that shortened word lengths can not boost click-through rate (CTR) for IKEA compared to longer word lengths. Therefore, we would recommend IKEA stick on its longer word lengths on banners.
+ 
+Besides, if the observed p-value of testing the difference between discount types is smaller than 0.05, we will reject the null hypothesis and conclude that there is statistical evidence showing that adding a 20% discount rate shown on the banner can increase the click-through rate (CTR)  on IKEA’s webpage. It also implies a meaningful effect size of 0.7% increase in click-through rate (CTR)  for IKEA’s webpage after adding a 20% discount rate compared to no discount rate. Therefore, we would recommend that IKEA add discount rates such as a 20% off event on their web banners in order to generate more click-through rate (CTR). However, if the p-value of testing the difference between discount types is greater than 0.05, we fail to reject the null hypothesis and conclude that adding 20% discount rates on banners can not increase the click-through rate (CTR) than no discounts. So we would recommend IKEA continue have no discount shown on their banners.
+
+
+### Limitations and Uncertainties
+
+**Authors (Qinrui Tian 50%; Jiayu Zhang 50%)**: 
+
+This study has a couple of limitations and several areas that are worthwhile to conduct further research on.
+ 
+Firstly, the difference in attention performance among participants may distort the results. It is hard to know whether participants will become impatient with a longer message and cannot pay attention to the content of such banners. The research team did not conduct an attention span test for each participant to test how long they could focus on a task without getting distracted. Secondly, the research did not examine the impact of brand familiarity on banner advertising effectiveness. It is also hard to know if participants familiar with IKEA would be more affected by the banners we designed than participants who did not know about this brand. Third, prior knowledge or Internet experiences may influence the study's results. Participants who are expert Internet users might be less affected by the animated banners than novice users. In addition, although participants were asked to use their personal computers to do the experiment, there still are some differences in each one’s device (i.e., the size of the screens or the performance of the computers). Smaller screens and poor performance would make it difficult to read labels and show the effect of the animation of banners. Finally, if the research team runs the test 1000 times, it would be time-consuming and expensive to execute this study. 
+ 
+In the future study, other practitioners can further explore how participants' backgrounds (i.e., age, gender, country, academic level, income level, etc.) affect the study's results. For example, people with higher income levels probably would pay less attention to the discount rate, and younger people might be more interested in the animated banners than older people. It is worthwhile to investigate and further probe whether these factors impact customers’ purchase intentions and how these factors relate to the outcomes of the study.
+ 
+Furthermore, as for the long-term data collection process, researchers suggest IKEA move from using the external vendor to the Google Analytics platform to track the banner ads performance continually. The GA software generated a unique tracking ID and Google tag for users to install on each page they wanted to measure. After activating the connection, the banner click-through rate (CTR)  data would be collected into Google Analytics in real-time. The GA account owner would analyze and monitor the click-through rate (CTR) data in the GA software. By doing so, it can save the IKEA marketing budget and also enhance its data security.
+ 
+Last but not least, future research can include more retailers that either has a strong eCommerce presence or have been devoted to growing digitally. It will be interesting to compare retailers in the furniture industry with other technology companies to identify new opportunities for furniture companies to excel.
+
+
+## Part 2:  Simulated Studies
+
+**Authors (Eli Guo 100%)**: 
+
+We simulate a separate data set for each scenario of all research questions. The dependent variable is binary, so the empirical data should follow a Bernoulli distribution. We hypothesize that a pop-up animation, shorter word length, and adding a 20% discount all have different degrees of positive influence on the dependent variable. Consistent with the previous settings, we assume an effect size of 0.003 for Research Question 1, an effect size of 0.005 for Research Question 2, and an effect size of 0.007 for Research Question 3. We take the minimum number of participants required in each group as the sample size based on the above calculations. In each scenario of the research questions, we conduct 1000 simulated studies. The experiment results are summarized and displayed in the Summary Table at the end of this section.
+
+```{r}
+library(data.table)
+library(DT)
+
+# create a function to simulate experiments
+simulate.data <- function(B, sample.size, prob.control, prob.treatment) {
+        n <- 2 * sample.size
+        
+        set.seed(5300)
+        Experiment <- 1:B
+        Group <- c(rep.int(x = "Treatment", times = n/2), rep.int(x = "Control", times = n/2))
+
+        sim.dat <- as.data.table(expand.grid(Experiment = Experiment, Group = Group))
+        setorderv(x = sim.dat, cols = c("Experiment", "Group"), order = c(1,1))
+        sim.dat[Group == "Control", Click := rbinom(n = .N, size = 1, prob = prob.control)]
+        sim.dat[Group == "Treatment", Click := rbinom(n = .N, size = 1, prob = prob.treatment)]
+        return(sim.dat)
+}
+```
+
+```{r}
+# create a function to gather test results from a single experiment
+analyze.experiment <- function(the.dat) {
+        require(data.table)
+        setDT(the.dat)
+        
+        # conduct a two-sample test of proportions
+        x1 <- nrow(the.dat[the.dat$Group == 'Treatment' & the.dat$Click == 1, ])
+        x2 <- nrow(the.dat[the.dat$Group == 'Control' & the.dat$Click == 1, ])
+        
+        the.test <- prop.test(x = c(x1, x2), 
+                              n = c(24603, 24603), 
+                              alternative = "greater")
+        
+        # gather the test results
+        the.effect <- the.test$estimate[1] - the.test$estimate[2]
+        p <- the.test$p.value
+        
+        result <- data.table(effect = the.effect, p = p)
+        
+        return(result)
+}
+```
+
+```{r}
+# calculate the t value for 95% confidence interval
+t.value <- qt(p = 0.05/2, df = 999, lower.tail = F)
+```
+
+
+### Research Question 1:
+
+#### Scenario 1:  No Effect
+
+**Authors (Eli Guo 100%)**: 
+
+
+##### Simulation
+
+```{r q1_scenario1_simulation}
+sim.dat1 <- simulate.data(B = 1000, sample.size = sample.size1, prob.control = 0.05, prob.treatment = 0.05)
+
+# first 100 observations of the simulated data
+datatable(data = sim.dat1[1:100, ], rownames = F)
+```
+
+##### Analysis
+
+```{r q1_scenario1_analysis}
+exp.results1 <- sim.dat1[, analyze.experiment(the.dat = .SD), keyby = "Experiment"]
+
+# first 100 observations of the experiment results
+datatable(data = exp.results1[1:100, ], rownames = F)
+
+# mean effect in simulated data
+avg.effect1 <- mean(exp.results1$effect); avg.effect1
+
+# lower bound of 95% confidence interval
+lower.bound1 <- avg.effect1 - t.value * sd(exp.results1$effect); lower.bound1
+
+# upper bound of 95% confidence interval
+upper.bound1 <- avg.effect1 + t.value * sd(exp.results1$effect); upper.bound1
+
+# percentage of false positives
+FPR1 <- sum(exp.results1$p <= 0.05) / 1000; FPR1 * 100
+
+# percentage of true negatives
+TNR1 <- 1 - FPR1; TNR1 * 100
+```
+
+
+#### Scenario 2:  An Expected Effect
+
+**Authors (Eli Guo 100%)**: 
+
+
+##### Simulation
+
+```{r q1_scenario2_simulation}
+sim.dat2 <- simulate.data(B = 1000, sample.size = sample.size1, prob.control = 0.05, prob.treatment = 0.053)
+datatable(data = sim.dat2[1:100, ], rownames = F)
+```
+
+##### Analysis
+
+```{r q1_scenario2_analysis}
+exp.results2 <- sim.dat2[, analyze.experiment(the.dat = .SD), keyby = "Experiment"]
+datatable(data = exp.results2[1:100, ], rownames = F)
+
+avg.effect2 <- mean(exp.results2$effect); avg.effect2
+lower.bound2 <- avg.effect2 - t.value * sd(exp.results2$effect); lower.bound2
+upper.bound2 <- avg.effect2 + t.value * sd(exp.results2$effect); upper.bound2
+
+# percentage of false negatives
+FNR1 <- sum(exp.results2$p > 0.05) / 1000; FNR1 * 100
+
+# percentage of true positives
+TPR1 <- 1 - FNR1; TPR1 * 100
+```
+
+
+### Research Question 2:
+
+#### Scenario 1:  No Effect
+
+**Authors (Eli Guo 100%)**: 
+
+
+##### Simulation
+
+```{r q2_scenario1_simulation}
+sim.dat3 <- simulate.data(B = 1000, sample.size = sample.size2, prob.control = 0.05, prob.treatment = 0.05)
+datatable(data = sim.dat3[1:100, ], rownames = F)
+```
+
+##### Analysis
+
+```{r q2_scenario1_analysis}
+exp.results3 <- sim.dat3[, analyze.experiment(the.dat = .SD), keyby = "Experiment"]
+datatable(data = exp.results3[1:100, ], rownames = F)
+
+avg.effect3 <- mean(exp.results3$effect); avg.effect3
+lower.bound3 <- avg.effect3 - t.value * sd(exp.results3$effect); lower.bound3
+upper.bound3 <- avg.effect3 + t.value * sd(exp.results3$effect); upper.bound3
+FPR2 <- sum(exp.results3$p <= 0.05) / 1000; FPR2 * 100
+TNR2 <- 1 - FPR2; TNR2 * 100
+```
+
+
+#### Scenario 2:  An Expected Effect
+
+**Authors (Eli Guo 100%)**: 
+
+
+##### Simulation
+
+```{r q2_scenario2_simulation}
+sim.dat4 <- simulate.data(B = 1000, sample.size = sample.size2, prob.control = 0.05, prob.treatment = 0.055)
+datatable(data = sim.dat4[1:100, ], rownames = F)
+```
+
+##### Analysis
+
+```{r q2_scenario2_analysis}
+exp.results4 <- sim.dat4[, analyze.experiment(the.dat = .SD), keyby = "Experiment"]
+datatable(data = exp.results4[1:100, ], rownames = F)
+
+avg.effect4 <- mean(exp.results4$effect); avg.effect4
+lower.bound4 <- avg.effect4 - t.value * sd(exp.results4$effect); lower.bound4
+upper.bound4 <- avg.effect4 + t.value * sd(exp.results4$effect); upper.bound4
+FNR2 <- sum(exp.results4$p > 0.05) / 1000; FNR2 * 100
+TPR2 <- 1 - FNR2; TPR2 * 100
+```
+
+
+### Research Question 3:
+
+#### Scenario 1:  No Effect
+
+**Authors (Eli Guo 100%)**: 
+
+
+##### Simulation
+
+```{r q3_scenario1_simulation}
+sim.dat5 <- simulate.data(B = 1000, sample.size = sample.size3, prob.control = 0.05, prob.treatment = 0.05)
+datatable(data = sim.dat5[1:100, ], rownames = F)
+```
+
+##### Analysis
+
+```{r q3_scenario1_analysis}
+exp.results5 <- sim.dat5[, analyze.experiment(the.dat = .SD), keyby = "Experiment"]
+datatable(data = exp.results5[1:100, ], rownames = F)
+
+avg.effect5 <- mean(exp.results5$effect); avg.effect5
+lower.bound5 <- avg.effect5 - t.value * sd(exp.results5$effect); lower.bound5
+upper.bound5 <- avg.effect5 + t.value * sd(exp.results5$effect); upper.bound5
+FPR3 <- sum(exp.results5$p <= 0.05) / 1000; FPR3 * 100
+TNR3 <- 1 - FPR3; TNR3 * 100
+```
+
+
+#### Scenario 2:  An Expected Effect
+
+**Authors (Eli Guo 100%)**: 
+
+
+##### Simulation
+
+```{r q3_scenario2_simulation}
+sim.dat6 <- simulate.data(B = 1000, sample.size = sample.size3, prob.control = 0.05, prob.treatment = 0.057)
+datatable(data = sim.dat6[1:100, ], rownames = F)
+```
+
+##### Analysis
+
+```{r q3_scenario2_analysis}
+exp.results6 <- sim.dat6[, analyze.experiment(the.dat = .SD), keyby = "Experiment"]
+datatable(data = exp.results6[1:100, ], rownames = F)
+
+avg.effect6 <- mean(exp.results6$effect); avg.effect6
+lower.bound6 <- avg.effect6 - t.value * sd(exp.results6$effect); lower.bound6
+upper.bound6 <- avg.effect6 + t.value * sd(exp.results6$effect); upper.bound6
+FNR3 <- sum(exp.results6$p > 0.05) / 1000; FNR3 * 100
+TPR3 <- 1 - FNR3; TPR3 * 100
+```
+
+### Summary Table:
+
+| | Research Question | Scenario | Mean Effect in Simulated Data | 95% Confidence Interval of Mean Effect | Percentage of False Positives | Percentage of True Negatives | Percentage of False Negatives | Percentage of True Positives
+:-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-:
+1 | Question 1 | No Effect | -4.609194e-05 | (-0.00661737, 0.006525187) | 6.3 | 93.7 | |
+2 | Question 1 | Effect: 0.003 | 0.008133967 | (0.001461601, 0.01480633) | | | 19.4 | 80.6
+3 | Question 2 | No Effect | 7.23489e-06 | (-0.003925874, 0.003940344) | 5.6 | 94.4 | |
+4 | Question 2 | Effect: 0.005 | 0.004997805 | (0.001004425, 0.008991185) | | | 21.9 | 78.1
+5 | Question 3 | No Effect | 2.898021e-05 | (-0.002781849, 0.002839809) | 4.6 | 95.4 | |
+6 | Question 3 | Effect: 0.007 | 0.003640044 | (0.0007169597, 0.006563128) | | | 21.3 | 78.7
+
+
+## References
+
+**Authors (Eli Guo 20%; Jiayu Zhang 20%; Qintui Tian 20%; Ruishan Wu 20%; Xinyi Zhang 20%)**: 
+
+Altmeyer, M., Dernbecher, K., Hnatovskiy, V., Schubhan, M., Lessel, P., & Krüger, A. (2019, May). Gamified ads: Bridging the gap between user enjoyment and the effectiveness of online ads. In *Proceedings of the 2019 CHI Conference on Human Factors in Computing Systems* (pp. 1-12).
+
+Benway, J. P., & Lane, D. M. (1998). Banner blindness: Web searchers often miss “obvious” links. *Itg Newsletter, 1*(3), 1-22.
+
+Briggs, R. & Hollis, N. (1997) Advertising on the web: is there response before clickthrough? *Journal of Advertising Research, 37*(2), pp. 33–45.
+
+Brown, M. (2002). The use of banner advertisements with pull-down menus: A copy testing approach. *Journal of Interactive Advertising, 2*(2), 57-65.
+
+Cho, C. H. (2003). The effectiveness of banner advertisements: Involvement and click-through. *Journalism & Mass Communication Quarterly, 80*(3), 623-645.
+
+Huang, Y. T. (2018). The female gaze: Content composition and slot position in personalized banner ads, and how they influence visual attention in online shoppers. *Computers in Human Behavior, 82*, 1-15.
+
+IKEA. (2022). Privacy Policy. Retrieved from: [https://www.ikea.com/us/en/customer-service/privacy-policy/.](https://www.ikea.com/us/en/customer-service/privacy-policy/)
+
+Lee, J., & Ahn, J. H. (2012). Attention to banner ads and their effectiveness: An eye-tracking approach. *International Journal of Electronic Commerce, 17*(1), 119-137.
+
+Lissitsa, S., & Kol, O. (2016). Generation X vs. Generation Y–A decade of online shopping. *Journal of retailing and consumer services, 31*, 304-312.
+
+Lohtia, R., Donthu, N., & Hershberger, E. K. (2003). The impact of content and design elements on banner advertising click-through rates. *Journal of advertising Research, 43*(4), 410-418.
+
+Lorente-Páramo, Á. J., Chaparro-Peláez, J., & Hernández-García, Á. (2020). How to improve e-mail click-through rates–A national culture approach. *Technological Forecasting and Social Change, 161*, 120283.
+
+Manchanda, P., Dubé, J. P., Goh, K. Y., & Chintagunta, P. K. (2006). The effect of banner advertising on internet purchasing. *Journal of Marketing Research, 43*(1), 98-108.
+
+Moe, W. W. (2006). A field experiment to assess the interruption effect of pop-up promotions. *Journal of Interactive Marketing, 20*(1), 34-44.
+
+Namin, A., Hamilton, M. L., & Rohm, A. J. (2020). Impact of message design on banner advertising involvement and effectiveness: An empirical investigation. *Journal of Marketing Communications, 26*(2), 115-129.
+
+Net Conversion (2022). Client Data Handling Policy. Retrieved from: [https://netconversion.com/client-data-handling-policy/.](https://netconversion.com/client-data-handling-policy/)
+
+North, M., & Ficorilli, M. (2017). Click me: an examination of the impact size, color, and design has on banner advertisements generating clicks. *Journal of Financial Services Marketing, 22*(3), 99-108.
+
+Outbrain. (2022). *[Beginner – 101] Banner Advertising: What Types of Banner Ads Exist?* Retrieved from: [https://www.outbrain.com/help/advertisers/banner-ads/#:~:text=The%20three%20types%20of%20banner,banner%20may%20be%20displayed%20in.](https://www.outbrain.com/help/advertisers/banner-ads/#:~:text=The%20three%20types%20of%20banner,banner%20may%20be%20displayed%20in)
+
+Peker, S., Menekse Dalveren, G. G., & İnal, Y. (2021). The Effects of the Content Elements of Online Banner Ads on Visual Attention: Evidence from An-Eye-Tracking Study. *Future Internet, 13*(1), 18.
+
+Peng, Y. (2022). An Analysis of Experiential Marketing Strategy—Taking IKEA as an Example. In *Proceedings of the 5th International Conference on Economic Management and Green Development* (pp. 643-666). Springer, Singapore.
+
+Robinson, H., Wysocka, A., & Hand, C. (2007). Internet advertising effectiveness: the effect of design on click-through rates for banner ads. *International journal of advertising, 26*(4), 527-541.
+
+Schuler, A., & Buehlmann, U. (2003). Identifying future competitive business strategies for the US furniture industry: Benchmarking and paradigm shifts. *Newtown Square, PA: US Department of Agriculture, Forest Service, Northeastern Research Station. 15 p., 304.*
+
+Statista. (2022). *E-Commerce net sales of ikea.com from 2015 to 2.* Retrieved from: [https://www.statista.com/forecasts/1218317/ikea-revenue-development-ecommercedb.](https://www.statista.com/forecasts/1218317/ikea-revenue-development-ecommercedb)
+
+Vennenbernd, R. (2021). Inside IKEA's Digital Transformation. *Harvard Business Review.* Retrieved from: [https://hbr.org/2021/06/inside-ikeas-digital-transformation.](https://hbr.org/2021/06/inside-ikeas-digital-transformation)
+
+Zorn, S., Olaru, D., Veheim, T., Zhao, S., & Murphy, J. (2012). Impact of animation and language on banner click-through rates. *Journal of Electronic Commerce Research, 13*(2), 173-183.
+
